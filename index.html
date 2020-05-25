@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--added font import for styling-->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!--added bootstrap styleSheet-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--added personal secondary styleSheet-->
+    <link rel="stylesRandom" href="stylesRandom.css">
+    <!--javascript contains funtonality for:-->
+    <script src="scriptRandom.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!--title of form section-->
+        <h1>matrixRx_prescriptionCode</h1>
+            <h4>(a.k.a. randomPasswordGenerator)</h4>
+        <form>
+            <!--password generator button-->
+            <button type="submit">
+                prescribeCode
+            </button>
+            <!--password generator choices-->
+            <!--Uppercase-->
+            <label for="upperCase">
+                casedUpper
+            </label>
+            <input type="checkbox" id="upperCase">
+            <!--Numbers-->
+            <label for="numbers">
+                numericIntegers
+            </label>
+            <input type="checkbox" id="numbers">
+            <!--Uppercase-->
+            <label for="symbolSign">
+                symbolSigns
+            </label>
+            <input type="checkbox" id="symbolSign">
+            <!--password charater slider & number count-->
+            <label for="characterCount">
+                prescriptionCodeCount
+            </label>
+            <!--slider-->
+            <input type="range" min="8" max="32" value="10" id="codeRange">
+            <!--counter-->
+            <input type="number" min="8" max="32" value="10" id="codeNumber">
+        </form>
+        <div class="row">
+            <div class="col">
+                <input type="text" id="display">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
