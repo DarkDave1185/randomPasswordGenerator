@@ -18,44 +18,49 @@
         <!--title of form section-->
         <h4>matrixRx_prescriptionCode</h4>
             <h5>(a.k.a. randomPasswordGenerator)</h5>
-        <form>
+        <form id="generatorForm">
             <!--password generator button-->
-            <button class="button" type="submit">
+            <button class="btn" type="generate">
                 prescribeCode
             </button>
         <br >    
             <!--password generator choices-->
-            <!--Uppercase-->
             <div class="grid">
+                <!--Uppercase-->
                 <label for="upperCase">
                     casedUpper
                 </label>
-                <input type="checkbox" id="upperCase">
+                <input type="checkbox" id="upperCase" checked>
+                <!--Lowercase-->
+                <label for="lowerCase">
+                    casedLower
+                </label>
+                <input type="checkbox" id="lowerCase" checked>
                 <!--Numbers-->
                 <label for="numbers">
                     numericIntegers
                 </label>
-                <input type="checkbox" id="numbers">
+                <input type="checkbox" id="numbers" checked>
                 <!--Uppercase-->
                 <label for="symbolSign">
                     symbolSigns
                 </label>
-                <input type="checkbox" id="symbolSign">
+                <input type="checkbox" id="symbolSign" checked>
             </div>
                 <!--password charater slider & number count-->
                 <label for="characterCount" class="codez">
                     prescriptionCodeCount
                 </label>
-            <div class="grid2">
+            <div class="setting">
                 <!--counter-->
                 <input class="inputNumber" type="number" min="8" max="32" value="10" id="codeNumber">
                 <!--slider-->
                 <input type="range" min="8" max="32" value="10" id="codeRange">
             </div>
         </form>
-        <div class="row">
-            <div class="col">
-                <input type="text" id="display">
+        <div class="container">
+            <div class="result-container">
+                <span id="result"></span>
             </div>
         </div>
     </div>
