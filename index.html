@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!--added personal secondary styleSheet-->
     <link rel="stylesheet" href="stylesRandom.css">
-    <!--javascript contains funtonality for:-->
-    <script src="scriptRandom.js"></script>
 </head>
 <body>
     <div class="container">
@@ -20,7 +18,7 @@
             <h5>(a.k.a. randomPasswordGenerator)</h5>
         <form id="generatorForm">
             <!--password generator button-->
-            <button class="btn" type="generate">
+            <button class="btn" id="generate">
                 prescribeCode
             </button>
         <br >    
@@ -53,16 +51,18 @@
                 </label>
             <div class="setting">
                 <!--counter-->
-                <input class="inputNumber" type="number" min="8" max="32" value="10" id="codeNumber">
+                <label>RxLength</label>
+                <input class="inputNumber" type="number" min="8" max="32" value="8" id="length">
                 <!--slider-->
-                <input type="range" min="8" max="32" value="10" id="codeRange">
+                <input class="rangeNumber" type="range" min="8" max="32" value="10" id="codeRange">
             </div>
         </form>
-        <div class="container">
-            <div class="result-container">
-                <span id="result"></span>
-            </div>
+        <div class="result-container">
+            <span id="result"></span>
         </div>
+        
     </div>
 </body>
+  <!--javascript contains funtonality for:-->
+  <script src="scriptRandom.js"></script>
 </html>
