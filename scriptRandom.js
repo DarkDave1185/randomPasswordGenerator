@@ -34,11 +34,11 @@ generate.addEventListener("click", (e) => {
     resultEl.innerText = text
 });
 
-function generatePassword(lower, upper, number, symbol, length) {
+function generatePassword(upper, lower, number, symbol, length) {
     let generatedPassword = "";
-    const typesCount = lower + upper + number + symbol;
+    const typesCount = upper + lower + number + symbol;
     console.log("typesCount" + typesCount)
-    const typesArr = [{ lower }, { upper }, { number }, { symbol }].filter
+    const typesArr = [{ upper }, { lower }, { number }, { symbol }].filter
         (item => Object.values(item)[0]);
     console.log("typesArr", typesArr)
     /* no type found*/
@@ -70,12 +70,11 @@ function getRandomUpper() {
 function getRandomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
-console.log("getRandomLower" + getRandomLower)
 
 function getRandomNumber() {
     return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 }
-con
+
 function getRandomSymbol() {
     const symbol = "!@#$%^&*(){}[]=<>/,."
     return symbol[Math.floor(Math.random() * symbol.length)];

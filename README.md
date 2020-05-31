@@ -12,7 +12,7 @@ This password generator will allow the user to create a unique password with a l
 
 ## Screenshot- 
 
-![alt text](add link "pageName")
+![alt text](add link "passwordGeneratorScreen")
 
 ## Deployment Link- 
 https://github.com/DarkDave1185/randomPasswordGenerator
