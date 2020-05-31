@@ -47,12 +47,6 @@ const finalPassword=generatedPassword.slice (0, length);
     return finalPassword
 }
 
-const textarea = document.createElement('textarea');
-const password = resultEl.innerText;
-
-textarea.value = password;
-document.body.appendChild(textarea);
-
 function getRandomUpper() {
     return String.fromCharCode(Math.floor(Math.random()*26)+65);
 }
