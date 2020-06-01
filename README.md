@@ -8,7 +8,7 @@ This password generator will allow the user to create a unique password with a l
 
 *Bootstrap & Flexbox || 
 *YouTube: Web Dev Simplified & Technical Cafe & Traversly Media || 
-*Slack - #learning-assistants
+*Slack - #learning-assistants -
 
 ## Screenshot- 
 

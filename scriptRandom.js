@@ -23,9 +23,13 @@ generate.addEventListener("click", (e) => {
     const hasNumber = numberEl.checked;
     const hasSymbol = symbolEl.checked;
     const length = +lengthEl.value
-
-    text = generatePassword(hasUpperCase, hasLowerCase, hasNumber, hasSymbol, length);
+    
+    if (length > 32 || length < 8 ){
+        alert("Choose Number between 8-32 only!")
+        } else {
+            text = generatePassword(hasUpperCase, hasLowerCase, hasNumber, hasSymbol, length);
     resultEl.innerText = text
+        }
 });
 
 function generatePassword(upper, lower, number, symbol, length) {
