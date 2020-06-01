@@ -18,47 +18,34 @@ const randomFunction = {
 
 generate.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log("whats up")
     const hasUpperCase = upperCaseEl.checked;
     const hasLowerCase = lowerCaseEl.checked;
     const hasNumber = numberEl.checked;
     const hasSymbol = symbolEl.checked;
     const length = +lengthEl.value
-    console.log("hasUpperCase" + hasUpperCase)
-    console.log("hasLowerCase" + hasLowerCase)
-    console.log("hasNumber" + hasNumber)
-    console.log("hasSymbol" + hasSymbol)
+
     text = generatePassword(hasUpperCase, hasLowerCase, hasNumber, hasSymbol, length);
-    console.log("resultEL", resultEl)
-    console.log("text", text)
     resultEl.innerText = text
 });
 
 function generatePassword(upper, lower, number, symbol, length) {
     let generatedPassword = "";
     const typesCount = upper + lower + number + symbol;
-    console.log("typesCount" + typesCount)
     const typesArr = [{ upper }, { lower }, { number }, { symbol }].filter
         (item => Object.values(item)[0]);
-    console.log("typesArr", typesArr)
     /* no type found*/
     if (typesCount === 0) {
         return "";
     }
     /* loop */
-    console.log("before", length)
     for (let i = 0; i < length; i += typesCount) {
         typesArr.forEach(type => {
             const funcName = Object.keys(type)[0];
             generatedPassword += randomFunction[funcName]();
-            console.log("generatedPassword", generatedPassword, type)
-            console.log("funcName", funcName)
         });
     }
     /* password created with */
     const finalPassword = generatedPassword.slice(0, length);
-    console.log("generatedPassword", generatedPassword)
-    console.log("finalPassword" , finalPassword)
     return finalPassword
    
 }
