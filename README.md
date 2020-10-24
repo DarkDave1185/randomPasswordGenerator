@@ -15,4 +15,4 @@ This password generator will allow the user to create a unique password with a l
 ![alt text](https://github.com/DarkDave1185/randomPasswordGenerator/blob/master/passwordScreen.jpg "passwordGeneratorScreen")
 
 ## Deployment Link- 
-https://github.com/DarkDave1185/randomPasswordGenerator
+https://darkdave1185.github.io/randomPasswordGenerator/
